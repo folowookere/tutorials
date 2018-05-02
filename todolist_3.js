@@ -5,15 +5,15 @@ var todoList = {
   displayToDos: function() {
    console.log('My todos:', this.todos);
   },
-  addToDo: function(toDoText) {
+  addToDo: function(todoText) {
     this.todos.push({
       todoText: todoText,
       completed: false
     });
     this.displayToDos();
   },
-  changeToDo: function(position, newValue) {
-    this.todos[position] = newValue;
+  changeToDo: function(position, todoText) {
+   this.todos[position].todoText = todoText; 
     this.displayToDos();
   },
   deleteToDo: function(position) {
